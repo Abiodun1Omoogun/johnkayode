@@ -1,0 +1,61 @@
+---
+import Header from '../components/Header.astro'
+import Main from '../components/Main.astro'
+import Footer from '../components/Footer.astro'
+
+const title = 'John Kayode'
+const description = 'John Kayode is a product manager and UI/UX designer.'
+const keywords = ['john kayode', 'product manager', 'ui designer', 'ux designer']
+const twitter = '@JohnKayode6'
+const site = 'https://johnkayode.pages.dev'
+const image = 'https://johnkayode.pages.dev/john.jpg'
+const imageWidth = '853'
+const imageHeight = '1058'
+
+const { page, showFooter } = Astro.props as {
+	page: 'home' | 'works' | 'about-me' | 'pm-works' | 'contact-me'
+	showFooter?: true
+}
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="canonical" href={site} />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<meta name="description" content={description} />
+		<meta name="keywords" content={keywords.join(', ')} />
+		<meta name="generator" content={Astro.generator} />
+		<meta property="og:title" content={title} />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={site} />
+		<meta property="og:image" content={image} />
+		<meta property="og:image:width" content={imageWidth} />
+		<meta property="og:image:height" content={imageHeight} />
+		<meta property="og:site_name" content={title} />
+		<meta property="og:description" content={description} />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content={twitter} />
+		<meta name="twitter:creator" content={twitter} />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:url" content={site} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image:src" content={image} />
+		<link
+			rel="preload"
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Noto+Color+Emoji&display=swap"
+			as="style"
+			onload="this.onload=null; this.rel='stylesheet';"
+		/>
+		<title>{title}</title>
+	</head>
+	<body class="flex min-h-screen flex-col bg-white font-['Poppins',sans-serif] text-neutral-900">
+		<Header page={page} />
+		<Main>
+			<slot />
+		</Main>
+		{showFooter && <Footer />}
+	</body>
+</html>
