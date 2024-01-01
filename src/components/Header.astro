@@ -5,9 +5,9 @@ const { page } = Astro.props as { page: 'home' | 'works' | 'about-me' | 'pm-work
 ---
 
 <header
-	class="bg-jk-black text-jk-white sticky top-0 flex h-20 items-center justify-between px-4 md:px-8"
+	class="sticky top-0 flex h-20 items-center justify-between bg-jk-black px-4 text-jk-white md:px-8"
 >
-	<a href="/" class="fill-jk-white flex items-center gap-1.5 text-2xl font-medium">
+	<a href="/" class="flex items-center gap-1.5 fill-jk-white text-2xl font-medium">
 		<IconJK />
 		JOHNNYKAY
 	</a>
@@ -21,13 +21,13 @@ const { page } = Astro.props as { page: 'home' | 'works' | 'about-me' | 'pm-work
 				}`}>Home</a
 			>
 			<a
-				href="/"
+				href="/works"
 				class={`${
 					page === 'works' ? '' : 'text-neutral-500 hover:text-neutral-300 duration-200'
 				}`}>Works</a
 			>
 			<a
-				href="/"
+				href="/about-me"
 				class={`${
 					page === 'about-me'
 						? ''
@@ -35,7 +35,7 @@ const { page } = Astro.props as { page: 'home' | 'works' | 'about-me' | 'pm-work
 				}`}>About Me</a
 			>
 			<a
-				href="/"
+				href="/pm-works"
 				class={`${
 					page === 'pm-works'
 						? ''
@@ -43,7 +43,7 @@ const { page } = Astro.props as { page: 'home' | 'works' | 'about-me' | 'pm-work
 				}`}>PM Works</a
 			>
 			<a
-				href="/"
+				href="/contact-me"
 				class={`${
 					page === 'contact-me'
 						? ''
@@ -53,7 +53,7 @@ const { page } = Astro.props as { page: 'home' | 'works' | 'about-me' | 'pm-work
 		</nav>
 		<a
 			href="/todo"
-			class="bg-jk-purple hover:bg-jk-purple/80 flex h-9 items-center justify-center rounded-2xl px-6 text-sm duration-200"
+			class="flex h-9 items-center justify-center rounded-2xl bg-jk-purple px-6 text-sm duration-200 hover:bg-jk-purple/80"
 			>VIEW MY CV</a
 		>
 	</div>
@@ -62,59 +62,55 @@ const { page } = Astro.props as { page: 'home' | 'works' | 'about-me' | 'pm-work
 		<svg xmlns="http://www.w3.org/2000/svg" height="36" viewBox="0 -960 960 960" width="36">
 			<path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"></path>
 		</svg>
-		<div
-			id="menu"
-			class="bg-jk-black text-jk-white fixed left-0 top-20 hidden h-screen w-full flex-col px-4 lg:hidden"
-		>
-			<nav class="flex flex-col items-center gap-6 text-xl">
-				<a
-					href="/"
-					class={`${
-						page === 'home'
-							? ''
-							: 'text-neutral-500 hover:text-neutral-300 duration-200'
-					}`}>Home</a
-				>
-				<a
-					href="/"
-					class={`${
-						page === 'works'
-							? ''
-							: 'text-neutral-500 hover:text-neutral-300 duration-200'
-					}`}>Works</a
-				>
-				<a
-					href="/"
-					class={`${
-						page === 'about-me'
-							? ''
-							: 'text-neutral-500 hover:text-neutral-300 duration-200'
-					}`}>About Me</a
-				>
-				<a
-					href="/"
-					class={`${
-						page === 'pm-works'
-							? ''
-							: 'text-neutral-500 hover:text-neutral-300 duration-200'
-					}`}>PM Works</a
-				>
-				<a
-					href="/"
-					class={`${
-						page === 'contact-me'
-							? ''
-							: 'text-neutral-500 hover:text-neutral-300 duration-200'
-					}`}>Contact Me</a
-				>
-				<a
-					href="/todo"
-					class="bg-jk-purple hover:bg-jk-purple/80 flex h-10 items-center justify-center rounded-2xl px-7 text-base duration-200"
-					>VIEW MY CV</a
-				>
-			</nav>
-		</div>
 	</button>
+	<div
+		id="menu"
+		class="fixed left-0 top-20 hidden h-screen w-full flex-col bg-jk-black px-4 py-20 text-jk-white lg:hidden"
+	>
+		<nav class="flex flex-col items-center gap-6 text-xl">
+			<a
+				href="/"
+				class={`${
+					page === 'home' ? '' : 'text-neutral-500 hover:text-neutral-300 duration-200'
+				}`}>Home</a
+			>
+			<a
+				href="/works"
+				class={`${
+					page === 'works' ? '' : 'text-neutral-500 hover:text-neutral-300 duration-200'
+				}`}>Works</a
+			>
+			<a
+				href="/about-me"
+				class={`${
+					page === 'about-me'
+						? ''
+						: 'text-neutral-500 hover:text-neutral-300 duration-200'
+				}`}>About Me</a
+			>
+			<a
+				href="/pm-works"
+				class={`${
+					page === 'pm-works'
+						? ''
+						: 'text-neutral-500 hover:text-neutral-300 duration-200'
+				}`}>PM Works</a
+			>
+			<a
+				href="/contact-me"
+				class={`${
+					page === 'contact-me'
+						? ''
+						: 'text-neutral-500 hover:text-neutral-300 duration-200'
+				}`}>Contact Me</a
+			>
+			<a
+				href="/todo"
+				class="flex h-10 items-center justify-center rounded-2xl bg-jk-purple px-7 text-base duration-200 hover:bg-jk-purple/80"
+				>VIEW MY CV</a
+			>
+		</nav>
+	</div>
 </header>
 
 <script>

@@ -3,13 +3,58 @@ import Layout from '../layouts/Layout.astro'
 ---
 
 <Layout page="home" showFooter>
-	<section class="flex flex-col gap-4 px-4 md:px-8">
-		<!-- <div class="flex flex-col text-center">
-			<h1 class="text-4xl">
+	<section
+		class="flex w-full max-w-6xl flex-col items-center gap-6 px-4 text-center md:px-8 lg:items-start lg:gap-8 lg:text-left"
+	>
+		<p class="flex flex-col gap-4 text-jk-purple lg:gap-6">
+			<span class="text-2xl sm:text-3xl lg:text-4xl">
 				Hi! I'm John <span class="font-emoji">👋</span>,
-				<br />
-				Product Designer & Product Manager Working In Web3.
-			</h1>
-		</div> -->
+			</span>
+			<span class="max-w-[30ch] text-3xl font-semibold sm:text-4xl lg:text-5xl"
+				>Product Designer & Product Manager Working In Web3.</span
+			>
+		</p>
+		<p class="max-w-[54ch] sm:text-lg lg:text-xl">
+			I specialize in building and managing user-centric digital solutions in the Web3
+			industry, <span class="font-semibold text-jk-purple"
+				>prioritizing user experience aligning with business goals and impacts.</span
+			>
+		</p>
+		<div class="flex justify-center gap-6">
+			<button
+				class="h-10 rounded-2xl bg-jk-purple px-7 text-sm text-white duration-200 hover:bg-jk-purple/80"
+				>SCHEDULE A CALL</button
+			>
+			<button
+				class="h-10 rounded-2xl border-2 border-jk-purple px-7 text-sm text-jk-purple duration-200 hover:bg-jk-purple/10"
+				>E-MAIL</button
+			>
+		</div>
+	</section>
+	<section
+		class="flex w-full max-w-6xl flex-col gap-6 border-t-2 border-jk-purple px-4 pt-10 text-center md:px-8"
+	>
+		<h1 class="text-3xl font-semibold text-jk-purple sm:text-4xl lg:text-5xl">
+			Featured Works
+		</h1>
+
+		<div>...</div>
+
+		<div class="flex flex-col items-center">
+			<button
+				class="flex h-10 items-center justify-center gap-3 rounded-2xl bg-jk-purple fill-white px-7 text-white duration-200 hover:bg-jk-purple/80"
+			>
+				See More Work
+
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					height="24"
+					viewBox="0 -960 960 960"
+					width="24"
+					><path d="m600-200-57-56 184-184H80v-80h647L544-704l56-56 280 280-280 280Z"
+					></path></svg
+				>
+			</button>
+		</div>
 	</section>
 </Layout>
