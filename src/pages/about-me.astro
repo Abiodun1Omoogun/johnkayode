@@ -11,7 +11,9 @@ import Layout from '../layouts/Layout.astro'
 				<img src="/john.jpg" class="aspect-square rounded-full object-cover lg:w-full" />
 			</div>
 			<div class="flex flex-col gap-6 sm:max-w-[64ch] lg:w-full">
-				<h1 class="text-2xl font-semibold leading-none text-jk-purple sm:text-3xl">
+				<h1
+					class="text-2xl font-semibold leading-none text-jk-purple sm:text-3xl lg:text-4xl"
+				>
 					ABOUT JOHN <span class="font-emoji">😎</span>
 				</h1>
 				<h2 class="text-lg font-semibold text-jk-purple sm:text-xl">
@@ -52,17 +54,117 @@ import Layout from '../layouts/Layout.astro'
 		</div>
 	</section>
 	<section
-		class="flex w-full max-w-6xl flex-col gap-6 px-4 text-center md:px-8 lg:items-start lg:gap-8 lg:text-left"
+		class="flex w-full max-w-6xl flex-col gap-6 px-4 text-center md:px-8 lg:gap-8 lg:text-left"
 	>
 		<div class="flex flex-col gap-3">
 			<div class="flex items-center justify-between gap-8">
-				<h2 class="text-2xl font-semibold text-jk-purple">What I can do</h2>
+				<h2 class="text-2xl font-semibold text-jk-purple sm:text-3xl lg:text-4xl">
+					What I can do
+				</h2>
 				<a
+					href="/todo"
 					class="flex h-9 items-center justify-center rounded-2xl bg-jk-purple px-6 text-sm text-jk-white duration-200 hover:bg-jk-purple/80"
 					>VIEW MY CV</a
 				>
 			</div>
-			<p class="text-start text-sm">If you can name it, I can do it.</p>
+			<p class="text-start text-sm sm:text-base">If you can name it, I can do it.</p>
+		</div>
+		<div class="grid grid-cols-1 gap-5 md:grid-cols-2">
+			<div class="flex flex-col rounded-2xl border border-neutral-300 shadow-sm">
+				<img alt="design" src="/design.jpg" class="rounded-t-2xl" />
+				<div class="flex flex-col gap-3 p-4 text-left lg:gap-4">
+					<h3 class="text-xl font-semibold text-jk-purple md:text-2xl lg:text-3xl">
+						DESIGN
+					</h3>
+					<p class="text-sm">
+						UI designs, user-centered designs, design thinking, user flows, concept
+						sketches, wireframes, mockups, information architecture, journey mapping,
+						design advocacy, and user advocacy, accessibility design.
+					</p>
+				</div>
+			</div>
+			<div class="flex flex-col rounded-2xl border border-neutral-300 shadow-sm">
+				<img alt="design" src="/product-management.jpg" class="rounded-t-2xl" />
+				<div class="flex flex-col gap-3 p-4 text-left lg:gap-4">
+					<h3 class="text-xl font-semibold text-jk-purple md:text-2xl lg:text-3xl">
+						PRODUCT MANAGEMENT
+					</h3>
+					<p class="text-sm">
+						Product analytics, product strategy, product development, product marketing,
+						stakeholder management, team building & leadership, prioritization,
+						data-analytics, roadmapping, user-centric approach, technical knowledge,
+						GTMK and PLG strategy, content optimiziation.
+					</p>
+				</div>
+			</div>
+			<div class="flex flex-col rounded-2xl border border-neutral-300 shadow-sm">
+				<img alt="design" src="/research.jpg" class="rounded-t-2xl" />
+				<div class="flex flex-col gap-3 p-4 text-left lg:gap-4">
+					<h3 class="text-xl font-semibold text-jk-purple md:text-2xl lg:text-3xl">
+						RESEARCH
+					</h3>
+					<p class="text-sm">
+						Product research, user research, UX audit, cognitive walkthrough, market
+						research, insights gathering, competitive analysis.
+					</p>
+				</div>
+			</div>
+			<div class="flex flex-col rounded-2xl border border-neutral-300 shadow-sm">
+				<img alt="design" src="/collaborations.jpg" class="rounded-t-2xl" />
+				<div class="flex flex-col gap-3 p-4 text-left lg:gap-4">
+					<h3 class="text-xl font-semibold text-jk-purple md:text-2xl lg:text-3xl">
+						COLLABORATIONS
+					</h3>
+					<p class="text-sm">
+						UX and business strategy, ideation, survey, flexible, detail-oriented,
+						communicative, design-critique.
+					</p>
+				</div>
+			</div>
+			<div class="flex flex-col rounded-2xl border border-neutral-300 shadow-sm">
+				<img alt="design" src="/soft-skills.jpg" class="rounded-t-2xl" />
+				<div class="flex flex-col gap-3 p-4 text-left lg:gap-4">
+					<h3 class="text-xl font-semibold text-jk-purple md:text-2xl lg:text-3xl">
+						SOFT SKILLS
+					</h3>
+					<p class="text-sm">
+						Communication, critical thinking, collaboration, problem solving,
+						receptiveness to feedback, decision making, scrum framework, agile
+						methodology, time management.
+					</p>
+				</div>
+			</div>
+			<div class="flex flex-col rounded-2xl border border-neutral-300 shadow-sm">
+				<img alt="design" src="/testing.jpg" class="rounded-t-2xl" />
+				<div class="flex flex-col gap-3 p-4 text-left lg:gap-4">
+					<h3 class="text-xl font-semibold text-jk-purple md:text-2xl lg:text-3xl">
+						TESTING
+					</h3>
+					<p class="text-sm">
+						Usability testing, user testing, a/b testing, heuristics evalaution.
+					</p>
+				</div>
+			</div>
+			<div class="flex flex-col rounded-2xl border border-neutral-300 shadow-sm">
+				<img alt="design" src="/writing.jpg" class="rounded-t-2xl" />
+				<div class="flex flex-col gap-3 p-4 text-left lg:gap-4">
+					<h3 class="text-xl font-semibold text-jk-purple md:text-2xl lg:text-3xl">
+						WRITING
+					</h3>
+					<p class="text-sm">UX writing, story telling, documentation.</p>
+				</div>
+			</div>
+			<div class="flex flex-col rounded-2xl border border-neutral-300 shadow-sm">
+				<img alt="design" src="/design.jpg" class="rounded-t-2xl" />
+				<div class="flex flex-col gap-3 p-4 text-left lg:gap-4">
+					<h3 class="text-xl font-semibold text-jk-purple md:text-2xl lg:text-3xl">
+						PROTOTYPING
+					</h3>
+					<p class="text-sm">
+						Rapid prototyping using Fignma and Invision Studio, paper prototyping.
+					</p>
+				</div>
+			</div>
 		</div>
 	</section>
 </Layout>
