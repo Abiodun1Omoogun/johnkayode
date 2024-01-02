@@ -3,13 +3,53 @@ import Layout from '../layouts/Layout.astro'
 ---
 
 <Layout page="pm-works">
-	<section class="flex flex-col gap-4 px-4 md:px-8">
-		<!-- <div class="flex flex-col text-center">
-			<h1 class="text-4xl">
-				Hi! I'm John <span class="font-emoji">👋</span>,
-				<br />
-				Product Designer & Product Manager Working In Web3.
-			</h1>
-		</div> -->
+	<section class="flex w-full max-w-6xl flex-col gap-6 px-4 md:px-8 lg:gap-8">
+		<div class="flex flex-col gap-10">
+			<div class="flex flex-col gap-4 sm:flex-row md:gap-8">
+				<img
+					class="aspect-square w-full rounded-2xl border object-cover sm:h-60 sm:w-60 md:h-72 md:w-72 lg:h-80 lg:w-80"
+				/>
+				<div class="flex flex-col items-start gap-4 md:gap-6 lg:gap-7">
+					<h1 class="text-3xl font-semibold text-jk-purple md:text-4xl lg:text-5xl">
+						APPLE SERVICES
+					</h1>
+					<p class="text-sm md:text-base lg:text-lg">
+						Introducing the pay with crypto feature as a mode of subscription for Apple
+						Services.
+					</p>
+					<p class="font-semibold md:text-lg lg:text-xl">
+						ROLE: PRODUCT MANAGER & DESIGNER
+					</p>
+					<p class="font-semibold md:text-lg lg:text-xl">PRODUCT: WEB3 PAYMENT</p>
+					<a
+						href="/todo"
+						class="flex h-9 items-center justify-center rounded-2xl bg-jk-purple px-7 text-sm text-white duration-200 hover:bg-jk-purple/80"
+						>READ CASE STUDY</a
+					>
+				</div>
+			</div>
+			<div class="flex flex-col gap-4 sm:flex-row md:gap-8">
+				<img
+					class="aspect-square w-full rounded-2xl border object-cover sm:h-60 sm:w-60 md:h-72 md:w-72 lg:h-80 lg:w-80"
+				/>
+				<div class="flex flex-col items-start gap-4 md:gap-6 lg:gap-7">
+					<h1 class="text-3xl font-semibold text-jk-purple md:text-4xl lg:text-5xl">
+						TRACKIT MOBILE APP
+					</h1>
+					<p class="text-sm md:text-base lg:text-lg">
+						A seemless digital logistics solution for business owners to ensure prompt
+						and dependable deliveries, and for online shoppers to effortlessly connect
+						with trusted couriers.
+					</p>
+					<p class="font-semibold md:text-lg lg:text-xl">ROLE: PRODUCT MANAGER</p>
+					<p class="font-semibold md:text-lg lg:text-xl">PRODUCT: E-COMMERCE</p>
+					<a
+						href="/todo"
+						class="flex h-9 items-center justify-center rounded-2xl bg-jk-purple px-7 text-sm text-white duration-200 hover:bg-jk-purple/80"
+						>READ CASE STUDY</a
+					>
+				</div>
+			</div>
+		</div>
 	</section>
 </Layout>
