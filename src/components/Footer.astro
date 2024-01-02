@@ -1,19 +1,85 @@
 <footer class="flex flex-col items-center bg-jk-purple text-jk-white">
-	<div class="flex w-full max-w-6xl flex-col px-4 py-16 md:px-8">
+	<div class="flex w-full max-w-6xl flex-col gap-6 px-4 py-16 md:px-8">
 		<div class="flex flex-col items-center gap-4 text-center sm:gap-6">
 			<h1 class="text-xl font-semibold sm:text-2xl lg:text-3xl">
 				What people says about me <span class="font-emoji">🫵</span>
 			</h1>
-			<p class="max-w-[72ch] text-sm sm:text-base lg:text-lg">
+			<p id="footer-comment" class="max-w-[72ch] text-sm sm:text-base lg:text-lg">
 				John is a very professional product designer & product manager. While working with
 				him for Samo DAO, he was very helpful. He guided me through the whole development
 				process and explained exactly what was needed. He made my job much easier as a
 				developer.
 			</p>
 			<div class="flex flex-col gap-1 sm:gap-1.5">
-				<p class="text-lg font-semibold sm:text-xl lg:text-2xl">Berzan</p>
-				<p class="sm:text-lg lg:text-xl">Software engineer working in Web3</p>
+				<p id="footer-name" class="text-lg font-semibold sm:text-xl lg:text-2xl">Berzan</p>
+				<p id="footer-title" class="sm:text-lg lg:text-xl">
+					Software engineer working in Web3
+				</p>
+			</div>
+		</div>
+		<div class="flex justify-center gap-3">
+			<div id="footer-section-1" class="h-2.5 w-2.5 bg-jk-white hover:cursor-pointer"></div>
+			<div id="footer-section-2" class="h-2.5 w-2.5 bg-jk-white/60 hover:cursor-pointer">
+			</div>
+			<div id="footer-section-3" class="h-2.5 w-2.5 bg-jk-white/60 hover:cursor-pointer">
+			</div>
+			<div id="footer-section-4" class="h-2.5 w-2.5 bg-jk-white/60 hover:cursor-pointer">
 			</div>
 		</div>
 	</div>
 </footer>
+
+<script>
+	const footerSection1 = document.getElementById('footer-section-1')!
+	const footerSection2 = document.getElementById('footer-section-2')!
+	const footerSection3 = document.getElementById('footer-section-3')!
+	const footerSection4 = document.getElementById('footer-section-4')!
+
+	const footerComment = document.getElementById('footer-comment')!
+	const footerName = document.getElementById('footer-name')!
+	const footerTitle = document.getElementById('footer-title')!
+
+	const section1Comment = footerComment.innerText
+	const section1Name = footerName.innerText
+	const section1Title = footerTitle.innerText
+
+	let selectedSection = footerSection1
+
+	footerSection1.addEventListener('click', () => {
+		selectedSection.classList.replace('bg-jk-white', 'bg-jk-white/60')
+		selectedSection = footerSection1
+		selectedSection.classList.replace('bg-jk-white/60', 'bg-jk-white')
+		footerComment.innerText = section1Comment
+		footerName.innerText = section1Name
+		footerTitle.innerText = section1Title
+	})
+
+	footerSection2.addEventListener('click', () => {
+		selectedSection.classList.replace('bg-jk-white', 'bg-jk-white/60')
+		selectedSection = footerSection2
+		selectedSection.classList.replace('bg-jk-white/60', 'bg-jk-white')
+		footerComment.innerText =
+			'John pays attention to details and delivers diligently. A professional creative designer. I highly recommend.'
+		footerName.innerText = 'Bolarinwa Odupe'
+		footerTitle.innerText = 'CEO, Centiiv'
+	})
+
+	footerSection3.addEventListener('click', () => {
+		selectedSection.classList.replace('bg-jk-white', 'bg-jk-white/60')
+		selectedSection = footerSection3
+		selectedSection.classList.replace('bg-jk-white/60', 'bg-jk-white')
+		footerComment.innerText =
+			'John is a passionate leader. His work ethics are pristine, and he is easily adjustable to a given situation. I highly recommend John as a product designer or product manager and would love to see him grow in his career.'
+		footerName.innerText = 'Opemipo Disu'
+		footerTitle.innerText = 'Developer Advocate, Kapeta'
+	})
+
+	footerSection4.addEventListener('click', () => {
+		selectedSection.classList.replace('bg-jk-white', 'bg-jk-white/60')
+		selectedSection = footerSection4
+		selectedSection.classList.replace('bg-jk-white/60', 'bg-jk-white')
+		footerComment.innerText = `I've had the pleasure of working alongside John for years, and I'm consistently impressed by his creative skills and technical expertise. His designs prioritize user experience and his commitment to excellence is unwavering. John is an innovative thinker and a valuable team player. I highly recommend him.`
+		footerName.innerText = 'Azeez Habeeb'
+		footerTitle.innerText = 'Product Designer, Brass'
+	})
+</script>
