@@ -3,13 +3,66 @@ import Layout from '../layouts/Layout.astro'
 ---
 
 <Layout page="about-me">
-	<section class="flex flex-col gap-4 px-4 md:px-8">
-		<!-- <div class="flex flex-col text-center">
-			<h1 class="text-4xl">
-				Hi! I'm John <span class="font-emoji">👋</span>,
-				<br />
-				Product Designer & Product Manager Working In Web3.
-			</h1>
-		</div> -->
+	<section
+		class="flex w-full max-w-6xl flex-col items-center gap-6 px-4 text-center md:px-8 lg:items-start lg:gap-8 lg:text-left"
+	>
+		<div class="flex flex-col items-center gap-6 lg:flex-row-reverse lg:items-start">
+			<div class="flex max-w-96 lg:w-full">
+				<img src="/john.jpg" class="aspect-square rounded-full object-cover lg:w-full" />
+			</div>
+			<div class="flex flex-col gap-6 sm:max-w-[64ch] lg:w-full">
+				<h1 class="text-2xl font-semibold leading-none text-jk-purple sm:text-3xl">
+					ABOUT JOHN <span class="font-emoji">😎</span>
+				</h1>
+				<h2 class="text-lg font-semibold text-jk-purple sm:text-xl">
+					Product Designer | Product Manager
+				</h2>
+				<p class="text-sm sm:text-base">
+					Welcome to my portfolio! I am an innovative product designer based in Lagos,
+					renowned for <span class="font-semibold text-jk-purple"
+						>delivering exceptional user-centered designs solutions and driving business
+						growth</span
+					> in the dynamic blockchain and Web3 industry.
+				</p>
+				<p class="text-sm sm:text-base">
+					Additionally, I am also a product manager, enabling me to contribute not only to
+					the design aspect but also to <span class="text-jk-purple">
+						the strategic planning, development, launch, and management of products and
+						services.
+					</span>
+				</p>
+				<p class="text-sm sm:text-base">
+					In Web3, I have extensive experience working in <span class="text-jk-purple"
+						>consumer techs, asset management, DAOs, NFT marketplaces, DEXs, payments,
+						B2B, and developer tools.</span
+					> I am also open to working and providing more user-centric solutions in other sectors
+					of blockchain and Web3.
+				</p>
+				<p class="text-sm sm:text-base">
+					I'm comfortable wearing multiple hats and switching them between <span
+						class="text-jk-purple">product desing and product management.</span
+					>
+				</p>
+
+				<p class="text-sm sm:text-base">
+					When I'm not working, I find purpose in community building in the blockchain and
+					Web3 space.
+				</p>
+			</div>
+		</div>
+	</section>
+	<section
+		class="flex w-full max-w-6xl flex-col gap-6 px-4 text-center md:px-8 lg:items-start lg:gap-8 lg:text-left"
+	>
+		<div class="flex flex-col gap-3">
+			<div class="flex items-center justify-between gap-8">
+				<h2 class="text-2xl font-semibold text-jk-purple">What I can do</h2>
+				<a
+					class="flex h-9 items-center justify-center rounded-2xl bg-jk-purple px-6 text-sm text-jk-white duration-200 hover:bg-jk-purple/80"
+					>VIEW MY CV</a
+				>
+			</div>
+			<p class="text-start text-sm">If you can name it, I can do it.</p>
+		</div>
 	</section>
 </Layout>
