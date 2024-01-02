@@ -3,13 +3,47 @@ import Layout from '../layouts/Layout.astro'
 ---
 
 <Layout page="contact-me">
-	<section class="flex flex-col gap-4 px-4 md:px-8">
-		<!-- <div class="flex flex-col text-center">
-			<h1 class="text-4xl">
-				Hi! I'm John <span class="font-emoji">👋</span>,
-				<br />
-				Product Designer & Product Manager Working In Web3.
-			</h1>
-		</div> -->
+	<section class="flex w-full max-w-6xl flex-col gap-6 px-4 md:px-8 lg:gap-8">
+		<div class="flex flex-col gap-14 lg:flex-row lg:justify-between lg:gap-16">
+			<div class="flex w-full min-w-max flex-col gap-4 sm:gap-5">
+				<h2 class="text-xl font-semibold text-jk-purple sm:text-3xl lg:text-4xl">
+					Interestes in working together?
+				</h2>
+				<div class="flex flex-col gap-4 sm:max-w-96 sm:gap-5">
+					<div class="flex flex-col gap-1.5 sm:gap-2">
+						<p class="text-lg sm:text-xl">Name</p>
+						<input
+							class="h-10 w-full rounded-2xl border border-neutral-300 px-4 outline-none focus:border-neutral-500"
+						/>
+					</div>
+					<div class="flex flex-col gap-1.5 sm:gap-2">
+						<p class="text-lg sm:text-xl">E-mail</p>
+						<input
+							class="h-10 w-full rounded-2xl border border-neutral-300 px-4 outline-none focus:border-neutral-500"
+						/>
+					</div>
+					<div class="flex flex-col gap-1.5 sm:gap-2">
+						<p class="text-lg sm:text-xl">Message</p>
+						<input
+							class="h-10 w-full rounded-2xl border border-neutral-300 px-4 outline-none focus:border-neutral-500"
+						/>
+					</div>
+					<button
+						class="h-10 self-start rounded-2xl bg-jk-purple px-8 text-sm text-white duration-200 hover:bg-jk-purple/80"
+						>Send</button
+					>
+				</div>
+			</div>
+			<div class="flex w-full flex-col gap-4 bg-red-50">
+				<h2 class="text-xl font-semibold text-jk-purple sm:text-3xl lg:text-4xl">
+					Get in touch!
+				</h2>
+				<p class="max-w-[50ch] sm:text-lg">
+					Contact me for UX audits, user-centric solutions for retention and conversion of
+					users, product strategy and roadmapping, MVP designs, and overall product design
+					and product management related work.
+				</p>
+			</div>
+		</div>
 	</section>
 </Layout>
