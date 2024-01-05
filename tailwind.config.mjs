@@ -10,7 +10,8 @@ export default {
 				'jk-black': '#131313',
 				'jk-purple': '#7342dc',
 				'jk-white': '#ffffff',
-				'jk-gray': '#404040'
+				'jk-gray': '#404040',
+				'jk-lightgrey': '#d3d3d3'
 			}
 		}
 	},
