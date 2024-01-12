@@ -3,6 +3,14 @@ import Header from '../components/Header.astro'
 import Main from '../components/Main.astro'
 import Footer from '../components/Footer.astro'
 
+
+
+// TypeScript declaration to address the error
+interface Window {
+    dataLayer?: any[]; // Make 'dataLayer' optional
+}
+
+
 const title = 'John Kayode'
 const description = 'John Kayode is a product manager and UI/UX designer.'
 const keywords = ['john kayode', 'product manager', 'ui designer', 'ux designer']
