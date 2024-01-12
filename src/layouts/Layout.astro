@@ -50,13 +50,6 @@ const { page, showFooter } = Astro.props as {
 			onload="this.onload=null; this.rel='stylesheet';"
 		/>
 		<title>{title}</title>
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-DJYG5FD155"></script>
-		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
-			gtag('js', new Date());
-			gtag('config', 'G-DJYG5FD155');
-		</script>
 	</head>
 	<body class="flex min-h-screen flex-col bg-white font-['Poppins',sans-serif] text-neutral-900">
 		<Header page={page} />
