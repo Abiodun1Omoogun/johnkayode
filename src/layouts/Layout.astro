@@ -54,6 +54,10 @@ const { page, showFooter } = Astro.props as {
 		<title>{title}</title>
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-DJYG5FD155"></script>
 		<script>
+			interface Window {
+				dataLayer?: any[]; // Make 'dataLayer' optional
+			}
+
 			window.dataLayer = window.dataLayer || [];
 			function gtag(...args: any[]): void {
 				window.dataLayer.push(...args);
