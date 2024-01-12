@@ -5,12 +5,6 @@ import Footer from '../components/Footer.astro'
 
 
 
-// TypeScript declaration to address the error
-interface Window {
-    dataLayer?: any[]; // Make 'dataLayer' optional
-}
-
-
 const title = 'John Kayode'
 const description = 'John Kayode is a product manager and UI/UX designer.'
 const keywords = ['john kayode', 'product manager', 'ui designer', 'ux designer']
@@ -61,10 +55,14 @@ const { page, showFooter } = Astro.props as {
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-DJYG5FD155"></script>
 		<script>
 			window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
+			function gtag(...args: any[]): void {
+				window.dataLayer.push(...args);
+			}
+
 			gtag('js', new Date());
 			gtag('config', 'G-DJYG5FD155');
-		</script>
+			</script>
+
 	</head>
 	<body class="flex min-h-screen flex-col bg-white font-['Poppins',sans-serif] text-neutral-900">
 		<Header page={page} />
