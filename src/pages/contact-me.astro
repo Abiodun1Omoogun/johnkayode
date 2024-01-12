@@ -9,30 +9,23 @@ import Layout from '../layouts/Layout.astro'
 				<h2 class="text-xl font-semibold text-jk-purple sm:text-3xl lg:text-4xl">
 					Interested?
 				</h2>
-				<div class="flex flex-col gap-4 sm:max-w-96 sm:gap-5">
-					<div class="flex flex-col gap-1.5 sm:gap-2">
-						<p class="text-lg sm:text-xl">Name</p>
-						<input
-							class="h-10 w-full rounded-2xl border border-neutral-300 px-4 outline-none focus:border-neutral-500"
-						/>
-					</div>
-					<div class="flex flex-col gap-1.5 sm:gap-2">
-						<p class="text-lg sm:text-xl">E-mail</p>
-						<input
-							class="h-10 w-full rounded-2xl border border-neutral-300 px-4 outline-none focus:border-neutral-500"
-						/>
-					</div>
-					<div class="flex flex-col gap-1.5 sm:gap-2">
-						<p class="text-lg sm:text-xl">Message</p>
-						<input
-							class="h-10 w-full rounded-2xl border border-neutral-300 px-4 outline-none focus:border-neutral-500"
-						/>
-					</div>
-					<button
-						class="h-10 self-start rounded-2xl bg-jk-purple px-8 text-sm text-white duration-200 hover:bg-jk-purple/80"
-						>Send</button
-					>
-				</div>
+				<form class="flex flex-col gap-2 sm:max-w-96 sm:gap-4" action="https://submit-form.com/eIVT5iLnz" data->
+					<label class="text-lg sm:text-xl" for="name">Name</label>
+					<input class="h-10 w-full rounded-2xl border border-neutral-300 px-4 outline-none focus:border-neutral-500" type="text" id="name" name="name" placeholder="Name" required="" />
+					<label class="text-lg sm:text-xl" for="email">Email</label>
+					<input class="h-10 w-full rounded-2xl border border-neutral-300 px-4 outline-none focus:border-neutral-500" type="email" id="email" name="email" placeholder="Email" required="" />
+					<label class="text-lg sm:text-xl" for="message">Message</label>
+					<textarea
+					  class="h-24 w-full rounded-2xl border border-neutral-300 px-4 outline-none focus:border-neutral-500"
+					  id="message"
+					  name="message"
+					  placeholder="Message"
+					  required=""
+					></textarea>
+					<button class="h-10 self-start rounded-2xl bg-jk-purple px-8 text-sm text-white duration-200 hover:bg-jk-purple/80" type="submit">Send</button>
+				  </form>
+				  
+
 			</div>
 			<div class="flex w-full flex-col gap-4">
 				<h2 class="text-xl font-semibold text-jk-purple sm:text-3xl lg:text-4xl">
